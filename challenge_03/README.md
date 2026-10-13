@@ -1,4 +1,4 @@
-# Challenge 03 – Online Store Purchase
+# Challenge 03 – Smart Cart
 
 ## Introduction
 
