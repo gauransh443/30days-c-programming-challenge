@@ -18,6 +18,11 @@ Create a C program called LOOPLAB to analyse daily expenses. Repeatedly read exp
 amount, classify it using the rules below, update counts and totals, and finally display a summary. Use loops, conditional statements, arithmetic
 operators, and variables. Do not use arrays, functions, or strings.
 
+* **Challenge 05** *
+Problem Statement
+Create a menu-driven C program that lets a user choose a mathematical operation. After each operation, display the menu again. The program 
+must stop only when the user selects Exit
+
 ## Language
 
 * C
