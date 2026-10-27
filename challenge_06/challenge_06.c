@@ -110,7 +110,7 @@ int main(){
     }
     printf("\n");
 
-//how many value divisible by 2
+//how many value divisible by D
 
     printf("Enter last two digits of registration number : ");
     scanf("%d",&R);
