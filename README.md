@@ -33,6 +33,14 @@ and to handle unusual cases correctly.
 Problem Statement
 A campus event uses ticket IDs from 1 to N. The scanner records N entries, but one ticket ID is missing and another ticket ID has been scanned twice. Your job is to audit the scan log, identify the missing and duplicate IDs, and measure how far the scan sequence is out of order. Plan your logic before writing code.
 
+* **Challenge 08** *
+Problem Statement
+Campus security has divided a high-traffic area into an N × N grid. Each cell stores a risk score from a sensor: 0 means no risk and 100 means the highest risk. You must build a C program called GRIDWATCH that traverses the grid in different ways to identify risky zones and recommend a response. This is not just a maximum-value problem: your solution must correctly analyse rows, columns, diagonals, boundaries, and neighbouring cells.
+
+* **Challenge 09** *
+* Problem Statement
+Your university is organising a technical event in an auditorium with 5 rows and 8 seats in each row. Develop a menu-driven C program called SEATSMART to manage seat reservations. The program must allow users to view seats, book or cancel an individual seat, reserve consecutive seats for a group, and view an occupancy report. You must use a two-dimensional array and separate user-defined functions for the major operations. 
+
 ## Language
 
 * C
