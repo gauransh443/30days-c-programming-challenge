@@ -26,20 +26,21 @@ A menu-driven C program to manage seat reservations in an auditorium with 5 rows
 ## Algorihtms
 1. Start
 2. Add function prototypes and defins ROWS 5 and COLS 8 .
-3. Create the array seats[5][8] and call initializeSeats.
-4. Show the menu (1 to 6) using do-while loop and read choice .
-5. While choice is less than 1 or greater than 6, print “Invalid choice” and read it again.
-6. If choice is 1 , call displayseats.
-7. If choice is 2 ,read row and column then call bookSeat if it return 1 , display "Seat booked successfully"
+3. Declare variable choice,size,row,col.
+4. Create the array seats[5][8] and call initializeSeats.
+5. Show the menu (1 to 6) using do-while loop and read choice .
+6. While choice is less than 1 or greater than 6, print “Invalid choice” and read it again.
+7. If choice is 1 , call displayseats.
+8. If choice is 2 ,read row and column then call bookSeat if it return 1 , display "Seat booked successfully"
    else display "Seat is not available".
-8. Display updated seat by calling function displaySeats.
-9. If choice is 3 ,read row and column then call cancelSeat if it return 1 display "Seat cancelled successfully" else display "Seat not cancelled ".
-10. Display updated seat by calling function displaySeats.
-11. If choice is 4 , read group size , then call reserveGroup if it return 1 , display "Group reserved"       otherwise display "No seats available".
-12. Display updated seat by calling function displaySeats.
-13. If choice is 5 ,call displayReport.
-14. If choice is 6, print the exit message.
-15. Stop .
+9. Display updated seat by calling function displaySeats.
+10. If choice is 3 ,read row and column then call cancelSeat if it return 1 display "Seat cancelled successfully" else display "Seat not cancelled ".
+11. Display updated seat by calling function displaySeats.
+12. If choice is 4 , read group size , then call reserveGroup if it return 1 , display "Group reserved"       otherwise display "No seats available".
+13. Display updated seat by calling function displaySeats.
+14. If choice is 5 ,call displayReport.
+15. If choice is 6, print the exit message.
+16. Stop .
 
 
 initializeSeats(int seats[ROWS][COLS])
@@ -73,7 +74,7 @@ reserveGroup(int seats[ROWS][COLS], int groupSize)
 3. Using for loop for each row from i = 0 to 4 , set count = 0.
 4. Use again for loop inner for colums from j=0 to 7 
 5. If seats[i][j] is 0, add 1 to count. Otherwise set count = 0.
-6. If groupsize = count , then use a for loop from k = j while k>j-groupsize and update by k--.
+6. If groupsize = count , then use a for loop from k = j while k>j-groupsize and update by k-- and set seats[i][k]=1.
 7. Print “Group booked: Row i + 1, first seat j - groupSize + 2” ,then return 1 , otherwise return 0.
 
 displayReport(int seats[ROWS][COLS])
