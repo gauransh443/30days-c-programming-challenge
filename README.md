@@ -38,7 +38,7 @@ Problem Statement
 Campus security has divided a high-traffic area into an N × N grid. Each cell stores a risk score from a sensor: 0 means no risk and 100 means the highest risk. You must build a C program called GRIDWATCH that traverses the grid in different ways to identify risky zones and recommend a response. This is not just a maximum-value problem: your solution must correctly analyse rows, columns, diagonals, boundaries, and neighbouring cells.
 
 * **Challenge 09** *
-* Problem Statement
+Problem Statement
 Your university is organising a technical event in an auditorium with 5 rows and 8 seats in each row. Develop a menu-driven C program called SEATSMART to manage seat reservations. The program must allow users to view seats, book or cancel an individual seat, reserve consecutive seats for a group, and view an occupancy report. You must use a two-dimensional array and separate user-defined functions for the major operations. 
 
 ## Language
