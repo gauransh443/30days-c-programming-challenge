@@ -1,3 +1,22 @@
+## Problem Statement
+The campus is divided into five zones: 1 Academic Block, 2 Hostel, 3 Library, 4 Cafeteria, and 5 Sports Area. For each zone, record
+three environmental parameters for seven days. Store the readings in three separate two-dimensional arrays. The system must analyse the
+data through user-defined functions and help you to identify where an environmental improvement could make the greatest difference.
+
+## Functions
+void inputData(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][DAYS]);
+void displayData(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][DAYS]);
+void calculateAverages(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][DAYS],
+     float avgTemp[ZONES], float avgHumidity[ZONES], float avgAQI[ZONES]);
+void detectRiskZones(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][DAYS],
+     int riskDays[ZONES]);
+void computeGreenIndex(float avgTemp[ZONES], 
+    float avgHumidity[ZONES], float avgAQI[ZONES], float greenIndex[ZONES]);
+void displayRanking(float greenIndex[ZONES]);
+void displayRecommendations(float avgTemp[ZONES], float avgHumidity[ZONES],
+     float avgAQI[ZONES], int riskDays[ZONES]);
+
+
 ## Algorithm
 1. Start
 2. Adding  function prototypes and define ZONES as 5 and DAYS as 7.
