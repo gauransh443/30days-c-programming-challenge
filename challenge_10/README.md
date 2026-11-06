@@ -1,24 +1,3 @@
-## Problem Statement 
-The campus is divided into five zones: 1 Academic Block, 2 Hostel, 3 Library, 4 Cafeteria, and 5 Sports Area. For each zone, record three environmental parameters for seven days. Store the readings in three separate two-dimensional arrays. The system must analyse the data through user-defined functions and help you to identify where an environmental improvement could make the greatest difference.
-
-## Data Input Rules
-
-Use ZONES = 5 and DAYS = 7. Create temp[ZONES][DAYS], humidity[ZONES][DAYS], and aqi[ZONES][DAYS]. Temperature must be 10–50 °C, humidity 0–100%, and AQI 0–500. Re-enter any invalid reading. Clearly label any simulated data; do not present simulated values as real campus measurements.
-
-## Function
-void inputData(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][DAYS]);
-void displayData(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][DAYS]);
-void calculateAverages(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][DAYS],
-     float avgTemp[ZONES], float avgHumidity[ZONES], float avgAQI[ZONES]);
-void detectRiskZones(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][DAYS],
-     int riskDays[ZONES]);
-void computeGreenIndex(float avgTemp[ZONES], 
-    float avgHumidity[ZONES], float avgAQI[ZONES], float greenIndex[ZONES]);
-void displayRanking(float greenIndex[ZONES]);
-void displayRecommendations(float avgTemp[ZONES], float avgHumidity[ZONES],
-     float avgAQI[ZONES], int riskDays[ZONES]);
-
-
 ## Algorithm
 1. Start
 2. Adding  function prototypes and define ZONES as 5 and DAYS as 7.
@@ -48,7 +27,7 @@ inputData(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][D
 displayData(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][DAYS])
 
 1. Print "Temperature Matrix" and the headings Day1 to Day 7 using for loop.
-2. For each zone,print the zone number and its 7 temperature values on one line.
+2. For each zone,print the zone number and its 7 temperature values on one line using nested for loop .
 3. Repeat steps 1 and 2 for the humidity matrix.
 4. Repeat steps 1 and 2 for the AQI matrix.
 
@@ -71,7 +50,7 @@ detectRiskZones(temp, humidity, aqi, riskDays)
 computeGreenIndex(avgTemp, avgHumidity, avgAQI, greenIndex)
 
 1. Declare variables i, aqiScore, tempScore, humScore, diff.
-2. For each zone i from 0 to 4, calculate the AQI score using aqiScore = 100-(avgAQI[i]/5).
+2. For each zone i from 0 to 4, calculate the AQI score using aqiScore = 100-|avgAQI[i]/5|.
 3. If aqiScore is less than 0, set aqiScore = 0.
 4. Set diff = avgTemp[i] − 25. If diff is less than 0, set diff = −diff.
 5. Set tempScore = 100 − (4 × diff). If tempScore is less than 0, set tempScore = 0.
@@ -91,10 +70,11 @@ displayRanking(float greenIndex[ZONES])
 
 displayRecommendations(avgTemp, avgHumidity, avgAQI, riskDays)
 
-1. Declare variables i and counter.
-2. For each zone i from 0 to 4, set counter = 0 and print the zone number.
-3. If avgAQI[i] is greater than 150, print "improve ventilation" and set counter = 1.
-4. If avgTemp[i] is greater than 35, print "Add shade or green cover" and set counter = 1.
-5. If avgHumidity[i] is greater than 80, print "Check ventilation or stagnant-water sources" and set counter = 1.
-6. If counter is 0 and riskDays[i] is greater than 0, print "Only few days flagged, review those dates".
-7. Otherwise, if counter is 0, print "No risk detected, continue monitoring".
+1. Declare variables i,counter.
+2. For each zone i from 0 to 4 then  set counter = 0 and print the zone number.
+3. If avgAQI[i] > 150, print "improve ventilation" and set counter = 1.
+4. If avgTemp[i] > 35, print "Add shade or green cover" and set counter = 1.
+5. If avgHumidity[i] > 80, print "Check ventilation or stagnant-water sources" and set counter = 1.
+6. If counter is 0 and riskDays[i] >0, print "Only few days flagged, review those dates".
+7. Otherwise, if counter == 0, print "No risk detected, continue monitoring".
+
