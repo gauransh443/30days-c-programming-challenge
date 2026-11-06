@@ -71,7 +71,7 @@ detectRiskZones(temp, humidity, aqi, riskDays)
 computeGreenIndex(avgTemp, avgHumidity, avgAQI, greenIndex)
 
 1. Declare variables i, aqiScore, tempScore, humScore, diff.
-2. For each zone i from 0 to 4, calculate the AQI score using aqiScore = 100-|avgAQI[i]/5|.
+2. For each zone i from 0 to 4, calculate the AQI score using aqiScore = 100-(avgAQI[i]/5).
 3. If aqiScore is less than 0, set aqiScore = 0.
 4. Set diff = avgTemp[i] − 25. If diff is less than 0, set diff = −diff.
 5. Set tempScore = 100 − (4 × diff). If tempScore is less than 0, set tempScore = 0.
