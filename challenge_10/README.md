@@ -4,16 +4,16 @@ three environmental parameters for seven days. Store the readings in three separ
 data through user-defined functions and help you to identify where an environmental improvement could make the greatest difference.
 
 ## Functions
-void inputData(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][DAYS]);
-void displayData(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][DAYS]);
-void calculateAverages(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][DAYS],
+1. void inputData(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][DAYS]);
+2. void displayData(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][DAYS]);
+3. void calculateAverages(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][DAYS],
      float avgTemp[ZONES], float avgHumidity[ZONES], float avgAQI[ZONES]);
-void detectRiskZones(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][DAYS],
+4. void detectRiskZones(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int aqi[ZONES][DAYS],
      int riskDays[ZONES]);
-void computeGreenIndex(float avgTemp[ZONES], 
+5. void computeGreenIndex(float avgTemp[ZONES], 
     float avgHumidity[ZONES], float avgAQI[ZONES], float greenIndex[ZONES]);
-void displayRanking(float greenIndex[ZONES]);
-void displayRecommendations(float avgTemp[ZONES], float avgHumidity[ZONES],
+6. void displayRanking(float greenIndex[ZONES]);
+7. void displayRecommendations(float avgTemp[ZONES], float avgHumidity[ZONES],
      float avgAQI[ZONES], int riskDays[ZONES]);
 
 
