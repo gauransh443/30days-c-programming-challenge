@@ -30,7 +30,7 @@ int main(){
     int audit_done = 0;
     inputWaterData(usage,dailyTarget);
     do{
-        printf("1 - Display matrix \n");
+        printf("1 - Display water data  \n");
         printf("2 - Generate audit report \n");
         printf("3 - Zones ranking by excess \n");
         printf("4 - Display conservation action \n");
