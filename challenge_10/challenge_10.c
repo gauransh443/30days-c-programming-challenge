@@ -204,6 +204,7 @@ void detectRiskZones(float temp[ZONES][DAYS], float humidity[ZONES][DAYS], int a
         }
         printf("Risk days count = %d \n",riskDays[i]);
     }
+    
 }
 
 
